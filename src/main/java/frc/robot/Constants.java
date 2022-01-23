@@ -5,6 +5,8 @@
 
 package frc.robot;
 
+import edu.wpi.first.math.kinematics.DifferentialDriveKinematics;
+
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
  * constants. This class should not be used for any other purpose. All constants should be declared
@@ -18,4 +20,21 @@ public final class Constants {
     public static final int MOTOR_CHANNEL_LEFT_2 = 2;
     public static final int MOTOR_CHANNEL_RIGHT_1 = 3;
     public static final int MOTOR_CHANNEL_RIGHT_2 = 4;
+
+    // These values must be tuned for your drive!
+    public static final double ksVolts = 0.642;
+    public static final double kvVoltSecondsPerMeter = 3.66;
+    public static final double kaVoltSecondsSquaredPerMeter = 0.203;
+    public static final double kPDriveVel = 1.66;
+    public static final double kTrackWidthMeters = 0.609;
+
+    // Reasonable baseline values for a RAMSETE follower in units of meters and seconds
+    public static final double kRamseteB = 2;
+    public static final double kRamseteZeta = 0.7;
+
+    public static final double ENCODER_SCALE_FACTOR_POSITION = 1.0;
+    public static final double ENCODER_SCALE_FACTOR_VELOCITY = 1.0;
+
+    public static final boolean LEFT_INVERTED = false;
+    public static final boolean RIGHT_INVERTED = true;
 }

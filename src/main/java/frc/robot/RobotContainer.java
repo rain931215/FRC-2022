@@ -8,7 +8,9 @@ package frc.robot;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
+import edu.wpi.first.wpilibj2.command.RunCommand;
 import frc.robot.commands.AutonomousCommandGroup;
+import frc.robot.subsystems.DriveSubsystem;
 
 
 /**
@@ -20,12 +22,20 @@ import frc.robot.commands.AutonomousCommandGroup;
 public class RobotContainer
 {
     private final AutonomousCommandGroup autonomousCommand = new AutonomousCommandGroup();
+
+    private final DriveSubsystem drive = new DriveSubsystem();
+
+    private final XboxController controller1 = new XboxController(0);
+    private final XboxController controller2 = new XboxController(1);
     
     /** The container for the robot. Contains subsystems, OI devices, and commands. */
     public RobotContainer()
     {
         // Configure the button bindings
         configureButtonBindings();
+        drive.setDefaultCommand(new RunCommand(() -> {
+            drive.arcadeDrive(-controller1.getLeftY(), controller1.getRightX());
+        }, drive));
     }
     
     
