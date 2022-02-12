@@ -55,7 +55,10 @@ public final class Constants {
     public static final int MOTOR_SHOOT = 1;
     public static final double SHOOT_SPEED = 0.5;
     public static final int MOTOR_ROTATE = 1;
-    public static final boolean MOTOR_ROTATE_REVERSE = false;
+    public static final boolean MOTOR_ROTATE_INVERTED = false;
     public static final int MOTOR_ANGLE = 1;
-    public static final boolean MOTOR_ANGLE_REVERSE = false;
+    public static final boolean MOTOR_ANGLE_INVERTED = false;
+    public static final double ALIGNMENT_X_OFFSET = 0;
+    public static final double ALIGNMENT_Y_OFFSET = 0;
+    public static final double[] PID_ROTATE = {0,0,0};
 }
