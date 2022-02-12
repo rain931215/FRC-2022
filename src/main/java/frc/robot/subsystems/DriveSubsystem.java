@@ -19,10 +19,10 @@ public class DriveSubsystem extends SubsystemBase {
     public boolean inverted = false;
 
     // Spark Max motor controllers
-    private final CANSparkMax leftMotor_1 = new CANSparkMax(Constants.MOTOR_CHANNEL_LEFT_1, CANSparkMaxLowLevel.MotorType.kBrushless);
-    private final CANSparkMax leftMotor_2 = new CANSparkMax(Constants.MOTOR_CHANNEL_LEFT_2, CANSparkMaxLowLevel.MotorType.kBrushless);
-    private final CANSparkMax rightMotor_1 = new CANSparkMax(Constants.MOTOR_CHANNEL_RIGHT_1, CANSparkMaxLowLevel.MotorType.kBrushless);
-    private final CANSparkMax rightMotor_2 = new CANSparkMax(Constants.MOTOR_CHANNEL_RIGHT_2, CANSparkMaxLowLevel.MotorType.kBrushless);
+    private final CANSparkMax leftMotor_1 = new CANSparkMax(Constants.MOTOR_CHASSIS_LEFT_1, CANSparkMaxLowLevel.MotorType.kBrushless);
+    private final CANSparkMax leftMotor_2 = new CANSparkMax(Constants.MOTOR_CHASSIS_LEFT_2, CANSparkMaxLowLevel.MotorType.kBrushless);
+    private final CANSparkMax rightMotor_1 = new CANSparkMax(Constants.MOTOR_CHASSIS_RIGHT_1, CANSparkMaxLowLevel.MotorType.kBrushless);
+    private final CANSparkMax rightMotor_2 = new CANSparkMax(Constants.MOTOR_CHASSIS_RIGHT_2, CANSparkMaxLowLevel.MotorType.kBrushless);
     private final AHRS navX = new AHRS(SPI.Port.kMXP);
     private final DifferentialDriveKinematics driveKinematics = new DifferentialDriveKinematics(Constants.kTrackWidthMeters);
 
